@@ -1,5 +1,5 @@
-VERSION = '0.0.0'
-APPNAME = 'appname'
+VERSION = '0.0.1'
+APPNAME = 'cnt'
 
 def options(opt):
     opt.load('compiler_cxx')
@@ -9,9 +9,6 @@ def configure(conf):
     conf.env.CXXFLAGS += ['-O2', '-Wall', '-g', '-pipe', '-std=c++11']
     conf.load('compiler_cxx')
     conf.load('unittest_gtest')
-
-    # conf.check_cfg(package='pficommon', args='--cflags --libs')
-    # conf.check_cxx(lib='libname', header_name='header.h')
 
 def build(bld):
     bld.recurse('src')
